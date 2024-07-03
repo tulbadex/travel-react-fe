@@ -4,8 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './component/Header/header'
 import Banner from './component/Banner/banner'
-import Flight from './component/Flight/flight'
-import UniquePlaces from './component/UniquePlaces/uniquePlaces'
+import AdventureSection from './component/AdventureSection/adventureSection'
+import UniquePlacesSection from './component/UniquePlacesSection/uniquePlaces'
 import Reviews from './component/Reviews/reviews'
 import Footer from './component/Footer/footer'
 
@@ -15,8 +15,8 @@ function App() {
     <>
       <Header />
       <Banner />
-      <Flight />
-      <UniquePlaces />
+      <AdventureSection />
+      <UniquePlacesSection />
       <Reviews />
       <Footer />
     </>
