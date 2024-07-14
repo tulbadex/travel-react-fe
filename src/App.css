@@ -40,3 +40,43 @@
 .read-the-docs {
   color: #888;
 }
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+    width: 100%;
+}
+
+.react-datepicker__input-container input {
+    width: 100%;
+    padding-left: 40px;
+    box-sizing: border-box;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.react-datepicker__tab-loop {
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+    font-size: 0.875rem;
+}
+
+.react-datepicker__header {
+    background-color: #fff;
+    border-bottom: 0;
+}
+
+.react-datepicker__close-icon::after {
+    background-color: #fff;
+    color: #605DEC;
+    font-weight: bold;
+}

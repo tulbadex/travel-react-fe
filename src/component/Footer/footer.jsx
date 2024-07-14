@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex justify-between items-center pt-4 border-t border-gray-200">
+        <div className="flex justify-between items-center pt-4 border-t border-gray-200 max-w-[1360px] w-full">
           <div className="flex space-x-4">
             <a href="#" className="text-gray-400 hover:text-gray-600">
               <img src={FaTwitter} alt="Twitter" />
