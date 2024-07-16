@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => (
     <div className="flex flex-col items-center">
@@ -16,6 +17,9 @@ const Login = () => (
       </div>
       <div className="flex items-center justify-center mb-4">
         <button type="submit" className="w-2/3 bg-[#605DEC] text-white py-2 rounded">Sign In</button>
+      </div>
+      <div className="flex items-center justify-center mb-4">
+          <Link to="/forgot-password" className="text-blue-600 hover:underline">Forgot Password?</Link>
       </div>
     </form>
   </div>

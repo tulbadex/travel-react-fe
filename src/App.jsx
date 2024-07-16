@@ -8,7 +8,9 @@ import {
   Home,
   Login,
   Hotel,
-  Package
+  Package,
+  ForgotPasswordPage,
+  ResetPasswordPage
 } from './page'
 
 import {
@@ -28,6 +30,8 @@ function App() {
         <Route path='/hotels' element={<Hotel />} />
         <Route path='/packages' element={<Package />} />
         <Route path='/login' element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
       <Footer />

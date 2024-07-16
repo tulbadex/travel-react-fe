@@ -64,12 +64,24 @@ function Banner() {
 
     const [value, setValue] = useState({
         startDate: new Date(),
-        endDate: new Date().setMonth(11)
+        endDate: null
     });
 
-    const handleValueChange = newValue => {
-        console.log("newValue:", newValue);
-        setValue(newValue);
+    const [isSingle, setIsSingle] = useState(false);
+
+    const handleValueChange = (newValue) => {
+        const { startDate, endDate } = newValue;
+
+        if (endDate && endDate < startDate) {
+            setValue({ startDate, endDate: null });
+        } else {
+            setValue(newValue);
+            if (!endDate) {
+                setIsSingle(true);
+            } else {
+                setIsSingle(false);
+            }
+        }
     };
 
     function isNumberKey(evt) {
@@ -99,7 +111,7 @@ function Banner() {
 
                         <div className="relative flex-grow flex items-center border px-4 py-2">
                             <img src={ToIcon} alt="To Icon" className="absolute left-3 w-5 h-5 text-gray-400" />
-                            <input type="text" placeholder="Where to?" className="pl-10 flex-grow focus:outline-none" />
+                            <input type="text" placeholder="Where to?" className="pl-10 flex-grow focus:outline-none" list="to-airports" />
                             <datalist id="to-airports">
                                 {airports.map((airport) => (
                                     <option key={airport.abbr} value={airport.abbr}>
@@ -120,6 +132,7 @@ function Banner() {
                                 minDate={new Date()} 
                                 // maxDate={new Date("2023-01-30")} 
                                 displayFormat={"DD/MM/YYYY"} 
+                                asSingle={isSingle}
                             />
                         </div>
 
